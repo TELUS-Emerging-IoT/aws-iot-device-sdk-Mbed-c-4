@@ -1,0 +1,30 @@
+{
+    "macros": [
+        "MBEDTLS_USER_CONFIG_FILE=\"mbedtls_entropy_config.h\"",
+        "ONLINE_COMPILER=1",
+        "ENABLE_IOT_INFO=1",
+        "ENABLE_IOT_WARN=1",
+        "ENABLE_IOT_ERROR=1",
+        "DEFAULT_APN=\"pp.telus.com\""
+    ],
+    "config": {
+        "network-interface":{
+            "help": "options are ETHERNET, CELLULAR_WNC14A2A, CELLULAR_BG96",
+            "value": "CELLULAR_BG96"
+        },
+        "bg96-debug": {
+            "help" : "enable or disable BG96 debug messages.",
+            "value": "false"
+        },
+        "bg96-debug_setting": {
+            "help" : "bit value 1 and/or 2 enable debug output, bit value 4 enables mbed driver debug output.",
+            "value": "0xac"
+        }
+    },
+    "target_overrides": {
+        "*": {
+             "platform.stdio-baud-rate": 115200,
+             "platform.stdio-convert-newlines": true
+        }
+    }
+}

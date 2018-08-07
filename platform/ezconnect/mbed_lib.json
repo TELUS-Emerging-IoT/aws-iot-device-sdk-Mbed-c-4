@@ -1,0 +1,4 @@
+{
+    "name": "easy-connect",
+    "macros": ["DEFAULT_APN=\"pp.telus.com\""]
+}
